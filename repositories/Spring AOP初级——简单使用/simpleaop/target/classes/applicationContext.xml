@@ -9,6 +9,8 @@
        http://www.springframework.org/schema/context/spring-context.xsd
 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!--扫描指定包下的类，将其注册为bean-->
     <context:component-scan base-package="com.springdemo.aop"/>
+    <!--启用AspectJ自动代理，其中proxy-target-class为true表示使用CGLib的代理方式，false表示JDK的代理方式，默认false-->
     <aop:aspectj-autoproxy />
 </beans>
