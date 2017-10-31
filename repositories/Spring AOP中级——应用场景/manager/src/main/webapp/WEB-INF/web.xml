@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath*:applicationContext.xml</param-value>
+  </context-param>
+  <context-param>
+    <param-name>log4jConfigurationLocation</param-name>
+    <param-value>classpath*:log4j.properties</param-value>
+  </context-param>
+
+  <!--每隔60s扫描log4j的配置文件，这里配置的log4jRefreshInterval参数表示能不用重启web服务器就能动态更改log4j日志级别，这也是和Spring整合的一大好处-->
+  <context-param>
+    <param-name>log4jRefreshInterval</param-name>
+    <param-value>60000</param-value>
+  </context-param>
+  <listener>
+    <!--从spring4.2.1开始Log4jConfigListener已经被废弃，最好使用log4j2对应的org.apache.logging.log4j.web.Log4jServletContextListener
+.Log4jServletContextListener-->
+    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
+  <!--注册ContextLoaderListener,加载根应用上下文-->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <!--注册DispatcherServlet，加载应用上下文-->
+  <servlet>
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath*:spring-servlet.xml</param-value>    <!--若不显示添加配置文件路径,则会默认加载servlt-name的名字+"-servlet.xml"-->
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <!--servlet映射-->
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+</web-app>

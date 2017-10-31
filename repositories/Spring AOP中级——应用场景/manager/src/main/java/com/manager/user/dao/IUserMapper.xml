@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manager.user.dao.IUserDao">
+    <select id="queryUsers" resultType="com.manager.user.pojo.User">
+        SELECT id, name, age FROM user
+    </select>
+
+    <insert id="addUser" useGeneratedKeys="true" keyProperty="id" parameterType="com.manager.user.pojo.User">
+        INSERT INTO user (name, age) VALUES (#{name}, #{age})
+    </insert>
+
+    <select id="queryUserById" parameterType="long" resultType="com.manager.user.pojo.User">
+      SELECT id, name, age FROM user WHERE id = #{id}
+    </select>
+
+    <update id="updateUserById" parameterType="com.manager.user.pojo.User">
+        UPDATE user SET name = #{name}, age = #{age} WHERE id = #{id}
+    </update>
+
+    <delete id="deleteUserById" parameterType="long">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+</mapper>
