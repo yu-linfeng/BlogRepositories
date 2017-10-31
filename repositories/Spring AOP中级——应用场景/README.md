@@ -15,12 +15,12 @@ IDE: IDEA 2017.2.5
 **RESTful API**
 
 |请求类型|请求路径|请求参数|返回参数|功能|
-|----|----|----|----|----|----
-|GET|/users||{"users": [{"id": "1", "name": "kevin", "age": "23"}, {"id": "2", "name":"steve", "age": "24"},	{"id": "3", "name": "tony", "age": "235"}]}|查找用户
-|POST|/users|{user: {id: "1", name: "kevin", age: "23"}}|{user: {id: "1", name: "kevin", age: "23"}}|新增用户
-|GET|/users/id|{id: "1"}|{user: {id: "1", name: "kevin", age: "23"}}|根据用户id查询用户
-|PUT|/users/id|user: {id: "1", name: "kevin", age: "23"}|通过用户id修改用户
-|DELETE|/users/id|{id: "1"}|通过用户id删除用户
+|----|----|----|----|----|----|
+|GET|/users||{"users": [{"id": "1", "name": "kevin", "age": "23"}, {"id": "2", "name":"steve", "age": "24"},	{"id": "3", "name": "tony", "age": "235"}]}|查找用户|
+|POST|/users|{user: {id: "1", name: "kevin", age: "23"}}|{user: {id: "1", name: "kevin", age: "23"}}|新增用户|
+|GET|/users/id|{id: "1"}|{user: {id: "1", name: "kevin", age: "23"}}|根据用户id查询用户|
+|PUT|/users/id|user: {id: "1", name: "kevin", age: "23"}|通过用户id修改用户|
+|DELETE|/users/id|{id: "1"}|通过用户id删除用户|
 **注：此RESTful API设计可能不规范，只做参考，有误的地方希望能给出指正。*
 
 ## 项目结构
