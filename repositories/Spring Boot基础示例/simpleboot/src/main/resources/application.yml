@@ -1,3 +1,11 @@
 server:
   port: 9090
   context-path: /custom_tomcat
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: test
+    password: test
+    virtual-host: test
+
