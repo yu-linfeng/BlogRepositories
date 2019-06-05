@@ -1,6 +1,7 @@
 package com.coderbuff.sword.s8;
 
 /**
+ * Description:
  *          1
  *         / \
  *        2   3
@@ -9,9 +10,9 @@ package com.coderbuff.sword.s8;
  *       \    /
  *        7  8
  * 中序遍历序列：4,7,2,1,5,3,8,6
- * @author OKevin
- * @date 2019/6/3
- **/
+ * 2019-06-05
+ * Created with OKevin.
+ */
 public class Main {
     public static void main(String[] args) {
         Node<Integer> node1 = new Node<>(1);
@@ -37,6 +38,6 @@ public class Main {
         node7.setParent(node4);
         node8.setParent(node6);
         Solution solution = new Solution();
-        System.out.println(solution.getNextNode(node6).getData());
+        System.out.println(solution.findNextNode(node1).getData());
     }
 }

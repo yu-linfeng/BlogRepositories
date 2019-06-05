@@ -3,33 +3,33 @@ package com.coderbuff.sword.s7;
 import java.util.Arrays;
 
 /**
- * 根据前序遍历序列和中序遍历序列重建二叉树
- * @author OKevin
- * @date 2019/5/30
- **/
+ * Description:
+ * 根据中序遍历序列和前序遍历序列，重建二叉树
+ * 前序遍历的序列第一位一定是根节点；中序遍历的根节点左边一定是其左子树节点，右边一定是其右子树节点
+ * 2019-06-03
+ * Created with OKevin.
+ */
 public class Solution {
-    public Node<Integer> buildBinaryTree(Integer[] preorder, Integer[] inorder) {
-        if (preorder.length == 0 || inorder.length == 0) {
+
+    public Node<Integer> buildBinaryTree(Integer[] preOrder, Integer[] inOrder) {
+        if (preOrder.length == 0 || inOrder.length == 0) {
             return null;
         }
-        Node<Integer> root = new Node<>(preorder[0]);
-        int index = search(0, inorder, root.getData());
-        root.setLeft(buildBinaryTree(Arrays.copyOfRange(preorder, 1, index + 1), Arrays.copyOfRange(inorder, 0, index)));
-        root.setRight(buildBinaryTree(Arrays.copyOfRange(preorder, index + 1, preorder.length), Arrays.copyOfRange(inorder, index + 1, inorder.length)));
+        Node<Integer> root = new Node<>(preOrder[0]);
+        int inOrderIndex = search(inOrder, root.getData());
+        if (inOrderIndex == -1) {
+            return null;
+        }
+        //定位根节点在中序遍历的位置n后，在中序遍历中n左边即为左子树，n右边即为右子树；在前序遍历中，前n个树即为左子树，后n个即为右子树
+        root.setLeft(buildBinaryTree(Arrays.copyOfRange(preOrder, 1, inOrderIndex + 1), Arrays.copyOfRange(inOrder, 0, inOrderIndex)));
+        root.setRight(buildBinaryTree(Arrays.copyOfRange(preOrder, inOrderIndex + 1, preOrder.length), Arrays.copyOfRange(inOrder, inOrderIndex + 1, inOrder.length)));
         return root;
     }
 
-    /**
-     * 在中旬遍历中查询根节点所在的位置
-     * @param start 开始查找的下标
-     * @param inorder 中序遍历序列
-     * @param rootData 根节点值
-     * @return 节点值在中序遍历序列中的下标位置
-     */
-    private int search(int start, Integer[] inorder, Integer rootData) {
-        for (; start < inorder.length; start++) {
-            if (rootData.equals(inorder[start])) {
-                return start;
+    private int search(Integer[] inOrder, Integer data) {
+        for (int i = 0; i < inOrder.length; i++) {
+            if (inOrder[i].equals(data)) {
+                return i;
             }
         }
         return -1;

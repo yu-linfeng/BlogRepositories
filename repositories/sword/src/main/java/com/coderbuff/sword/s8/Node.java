@@ -1,10 +1,11 @@
 package com.coderbuff.sword.s8;
 
 /**
- * 树节点定义
- * @author OKevin
- * @date 2019/6/3
- **/
+ * Description:
+ * 二叉树节点定义
+ * 2019-06-05
+ * Created with OKevin.
+ */
 public class Node<T> {
     /**
      * 值域
@@ -12,12 +13,12 @@ public class Node<T> {
     private T data;
 
     /**
-     * 左节点
+     * 左子节点
      */
     private Node<T> left;
 
     /**
-     * 右节点
+     * 右子节点
      */
     private Node<T> right;
 
