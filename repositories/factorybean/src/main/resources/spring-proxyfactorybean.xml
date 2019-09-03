@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="logAround" class="com.coderbuff.aop.LogAround"/>
+
+    <bean id="red" class="com.coderbuff.bean.Red"/>
+
+    <bean id="proxyRed" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="proxyInterfaces" value="com.coderbuff.bean.Color"/>
+        <property name="interceptorNames" value="logAround"/>
+        <property name="target" ref="red"/>
+        <property name="proxyTargetClass" value="true"/>
+    </bean>
+</beans>

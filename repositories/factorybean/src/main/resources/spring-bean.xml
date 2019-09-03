@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 静态工厂方法Setter注入START -->
+    <!--<bean id="cloth" class="com.coderbuff.bean.Cloth">
+        <property name="color" ref="red"/>
+    </bean>
+    <bean id="red" class="com.coderbuff.factory.StaticColorFactory" factory-method="getInstance"/>-->  <!-- 注入的对象实际实际是getInstance方法返回的对象 -->
+    <!-- 静态工厂方法Setter注入END -->
+
+
+    <!-- 非静态工厂方法Setter注入START -->
+    <!--<bean id="cloth" class="com.coderbuff.bean.Cloth">
+        <property name="color" ref="red"/>
+    </bean>
+    <bean id="colorFactory" class="com.coderbuff.factory.ColorFactory"/>
+    <bean id="red" factory-bean="colorFactory" factory-method="getInstance"/>-->
+    <!-- 非静态工厂方法Setter注入END -->
+
+
+    <!-- 实现FactoryBean注入 -->
+    <bean id="cloth" class="com.coderbuff.bean.Cloth">
+        <property name="color" ref="red"/>
+    </bean>
+    <bean id="red" class="com.coderbuff.factory.ColorFactoryBean"/>
+</beans>
