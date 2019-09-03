@@ -5,8 +5,7 @@ import com.coderbuff.bean.Red;
 
 /**
  * 静态工厂方法
- * @author cdyulinfeng
- * @date 2019/9/3
+ * Created by OKevin On 2019/9/3
  **/
 public class StaticColorFactory {
 

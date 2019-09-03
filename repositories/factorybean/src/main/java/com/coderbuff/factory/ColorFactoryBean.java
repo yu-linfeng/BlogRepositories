@@ -5,8 +5,7 @@ import com.coderbuff.bean.Red;
 import org.springframework.beans.factory.FactoryBean;
 
 /**
- * @author cdyulinfeng
- * @date 2019/9/3
+ * Created by OKevin On 2019/9/3
  **/
 public class ColorFactoryBean implements FactoryBean<Color> {
 

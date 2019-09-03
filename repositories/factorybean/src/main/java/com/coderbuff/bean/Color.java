@@ -1,8 +1,7 @@
 package com.coderbuff.bean;
 
 /**
- * @author cdyulinfeng
- * @date 2019/9/3
+ * Created by OKevin On 2019/9/3
  **/
 public interface Color {
     void print();

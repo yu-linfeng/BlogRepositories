@@ -5,8 +5,7 @@ import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @author cdyulinfeng
- * @date 2019/9/3
+ * Created by OKevin On 2019/9/3
  **/
 public class FactoryBeanTest {
     private ClassPathXmlApplicationContext ctx;

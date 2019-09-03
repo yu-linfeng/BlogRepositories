@@ -4,8 +4,8 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 /**
- * @author cdyulinfeng
- * @date 2019/9/3
+ * 环绕通知
+ * Created by OKevin On 2019/9/4
  **/
 public class LogAround implements MethodInterceptor {
     public Object invoke(MethodInvocation invocation) throws Throwable {
