@@ -50,4 +50,15 @@ public class Student {
     public void setScore(Double score) {
         this.score = score;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", studentNumber=" + studentNumber +
+                ", studentName='" + studentName + '\'' +
+                ", course='" + course + '\'' +
+                ", score=" + score +
+                '}';
+    }
 }

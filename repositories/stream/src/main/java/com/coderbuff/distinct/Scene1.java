@@ -1,4 +1,4 @@
-package com.coderbuff;
+package com.coderbuff.distinct;
 
 import com.coderbuff.data.Student;
 import com.coderbuff.data.StudentData;
