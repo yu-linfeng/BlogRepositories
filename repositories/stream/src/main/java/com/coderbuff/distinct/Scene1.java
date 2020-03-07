@@ -36,7 +36,7 @@ public class Scene1 {
         scene1.useSimpleDistinct();
         scene1.useStreamByTreeSet(students);
         scene1.useStreamByHashMap(students);
-        scene1.useForByMap(students);
+        scene1.calcStudentCount(students);
 
     }
 
@@ -64,7 +64,7 @@ public class Scene1 {
      * List列表中的元素是对象类型，使用For循环利用Map的key值不重复通过对象中的学号字段去重，计算有多少学生
      * @param students 学生信息
      */
-    private void useForByMap(List<Student> students) {
+    private void calcStudentCount(List<Student> students) {
         Map<Long, Student> map = new HashMap<>();
         for (Student student : students) {
             map.put(student.getStudentNumber(), student);

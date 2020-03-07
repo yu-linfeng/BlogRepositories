@@ -14,12 +14,13 @@ import java.util.stream.Collectors;
 public class StreamDemo {
 
     public static void main(String[] args) {
-        List<Student> students = new StudentData().getStudentData();
+        /*List<Student> students = new StudentData().getStudentData();
         Map<Long, List<Student>> studentMap = students.stream().collect(Collectors.groupingBy(Student::getStudentNumber)).entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
         System.out.println(studentMap);
         StreamDemo streamDemo = new StreamDemo();
         streamDemo.useFor(students);
-        streamDemo.useStream(students);
+        streamDemo.useStream(students);*/
+
     }
 
     private void useFor(List<Student> students) {
