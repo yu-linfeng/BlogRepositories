@@ -1,4 +1,4 @@
-package com.coderbuff.iterator;
+package com.coderbuff.chapter3_stream.chapter3_1;
 
 import java.util.Arrays;
 import java.util.List;

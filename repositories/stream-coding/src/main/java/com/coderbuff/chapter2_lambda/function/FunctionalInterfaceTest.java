@@ -1,4 +1,4 @@
-package com.coderbuff.lambda.function;
+package com.coderbuff.chapter2_lambda.function;
 
 /**
  * @author okevin

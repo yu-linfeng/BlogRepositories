@@ -1,4 +1,4 @@
-package com.coderbuff.lambda;
+package com.coderbuff.chapter2_lambda;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

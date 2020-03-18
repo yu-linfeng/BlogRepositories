@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Stream summaryStatistics求和计算
- * @author yulinfeng
+ * @author okevin
  * @date 2020/3/18
  */
 public class StreamSummaryStatisticsDemo {

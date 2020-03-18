@@ -1,11 +1,11 @@
-package com.coderbuff.chapter3_stream;
+package com.coderbuff.chapter3_stream.chapter3_2;
 
 import java.util.*;
 import java.util.stream.Stream;
 
 /**
  * 流的创建
- * @author yulinfeng
+ * @author okevin
  * @date 2020/3/16
  */
 public class StreamCreator {

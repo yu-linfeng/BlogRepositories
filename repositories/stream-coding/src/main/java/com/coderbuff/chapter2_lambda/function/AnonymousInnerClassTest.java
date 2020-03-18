@@ -1,4 +1,4 @@
-package com.coderbuff.lambda.function;
+package com.coderbuff.chapter2_lambda.function;
 
 /**
  * 按匿名类的方式使用一个函数式接口，传递行为
