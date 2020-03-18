@@ -85,4 +85,17 @@ public class StudentData {
 
         return students;
     }
+
+    /**
+     * 获取指定学生的测试数据
+     * @return 指定个学生的测试数据
+     */
+    public List<Student> fetchStudents(int count) {
+        List<Student> students = new ArrayList<>();
+
+        for (int i = 0; i < count; i++) {
+            students.addAll(getStudentData());
+        }
+        return students;
+    }
 }
